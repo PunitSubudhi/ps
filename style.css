@@ -169,6 +169,26 @@ h1 {
     background-color: var(--B);
 }
 
+#Conc {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: var(--B);
+}
+
+#ConcDiv {
+    height: 90%;
+    width: auto;
+    
+}
+
+#email {
+    height: 20px;
+}
 
 #Blog {
     display: flex;
