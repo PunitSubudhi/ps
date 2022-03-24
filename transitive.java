@@ -30,5 +30,4 @@ public class transitive {
             System.out.println("a<=c^3: " + a + " <= " + pow3(c));
         }
     }
-    
 }
