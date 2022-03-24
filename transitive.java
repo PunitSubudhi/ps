@@ -9,8 +9,8 @@ public class transitive {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         while (true) {
+            Scanner sc = new Scanner(System.in);
             System.out.print("\na: ");
             double a = sc.nextDouble();
 
@@ -28,6 +28,8 @@ public class transitive {
             System.out.println("a<=b^3: " + a + " <= " + pow3(b));
             System.out.println("b<=c^3: " + b + " <= " + pow3(c));
             System.out.println("a<=c^3: " + a + " <= " + pow3(c));
+
+            sc.close();
         }
     }
 }
