@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dev</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="">
+        <button type="button" class="navbtn" onclick="enableApp1()">Compare and Colours</button>
+        <button type="button" class="navbtn" onclick="enableApp2()" >Select RGB</button>
+        <button type="button" class="navbtn" onclick="enableApp3()">App 3</button>
+    </nav>
+
+    <div id="App1">
+        
+        <div class="wrapper">
+            <h1> Welcome to Colour match</h1>
+            <div class="vWrapper">
+
+                <!-- Input 1-->
+                <input type="text" name="color1" id="c1input" class="input" placeholder="Color1" onchange="updateValue()">
+                
+                <!-- Input 2-->
+                <input type="text" name="color2" id="c2input" class="input" placeholder="Color2" onchange="updateValue()">
+
+                <!-- Input 3-->
+                <input type="text" name="color3" id="c3input" class="input" placeholder="Color3" onchange="updateValue()">
+
+            </div>
+        </div>
+
+        <div class="wrapper" id="c1">
+            <h1>Color-1</h1>
+            <h1 id="colorName1"></h1>
+        </div>
+        
+        <div class="wrapper" id="c2">
+            <h1>Color-2</h1>
+            <h1 id="colorName2"></h1>
+        </div>
+        
+        <div class="wrapper" id="c3">
+            <h1>Color-3</h1>
+            <h1 id="colorName3"></h1>
+        </div>
+    </div>    
+
+    <div id="App2">
+        <div class="wrapper white">
+            <div class="app2rgb">
+                <div class="wrapper white">
+                    <div id="rgbcolor">
+                    </div>
+                </div>
+                <div class="wrapper fitcontent">
+
+                    <label for="rSlider" class="rgbLabel">Red Value</label>
+                    <input type="range" min="0" max="255" class="rgbSlider" id="rSlider" onchange="rgbUpdate()" value="0">
+                    
+                    <label for="gSlider" class="rgbLabel">Green Value</label>
+                    <input type="range" min="0" max="255" class="rgbSlider" id="gSlider" onchange="rgbUpdate()" value="0">
+                    
+                    <label for="bSlider" class="rgbLabel">Blue Value</label>
+                    <input type="range" min="0" max="255" class="rgbSlider" id="bSlider" onchange="rgbUpdate()" value="0">
+                    
+                    <div class="vWrapper">
+                        <p id="rValueText" class="rgbval" >0</p>
+                        <p id="gValueText" class="rgbval" >0</p>
+                        <p id="bValueText" class="rgbval" >0</p>
+                    </div>
+
+                    <div class="tooltip">
+                        <button onclick="myFunction()" onmouseout="outFunc()">
+                            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                            Copy RGB Values
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="App3">
+        <div class="wrapper">
+            <h1>App3</h1>
+        </div>
+    </div>
+
+</body>
+</html>
