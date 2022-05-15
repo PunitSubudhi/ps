@@ -31,3 +31,5 @@ function changeTextColor(){
       var color = document.getElementById('textColorInput').value;
       document.getElementById('colorDivText').style.color = color;
 }
+
+alert("This ia just a random website I made to showcase what ever I have learnt about JavaScript in the last 30 minutes, I have no Idea why I sent you this link, but anyway, now press ok and fiddle with it")
