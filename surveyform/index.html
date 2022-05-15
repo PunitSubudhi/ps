@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="Heading">
+        <h1 id="title">Please fill up this survey from</h1>
+        <p id="description">The survey helps us to make our product better and keep you(our customers) happy</p>
+    </div>
+    <form action="" id="survey-form">
+        <label for="name" id="name-label" class="labels">Name</label><br><br>
+        <input id="name" type="text" placeholder="Name" required class="input1"><br><br>
+        <label for="email" id="email-label" class="labels">Email<br></label><br>
+        <input id="email" type="email" placeholder="Email" required class="input1"><br><br>
+        <label for="number"  id="number-label" class="labels">Age(Optional)<br></label><br>
+        <input id="number" type="number" placeholder="Age" min="1" max="100" class="input1">
+        <h3 id="radioHeading">Did you like the Sandwhich?</h3>
+        <ul>
+            <li>
+                <label for="rdyes">Yes</label>
+                <input type="radio" id="rdeyes" name="YesNo" value="Yes">
+            </li>
+            <li>
+                <label for="reno">No</label>
+                <input type="radio" id="rdno" name="YesNo" value="No">
+            </li>
+        </ul>
+        <label for="dropdown" class="labels">What kind of Sandwhich did you buy?</label><br>
+        <select name="SandWhichType" id="dropdown">
+            <option value="Veg">Veg</option>
+            <option value="NonVeg">NonVeg</option>
+        </select>
+        <div id="checkboxes">
+            <h3 id="checkboxHeading">What meats/veggies did you choose for your Sandwhich?</h3>
+            <input id="Chicken" value="Chicken" name="CheckBox" type="checkbox">
+            <label for="Chicken">Chicken</label><br>
+            <input id="Mutton" value="Mutton" name="CheckBox" type="checkbox">
+            <label for="Mutton">Mutton</label><br>
+            <input id="Cucumber" value="Cucumber" name="CheckBox" type="checkbox">
+            <label for="Cucumber">Cucumber</label><br>
+            <input id="Lettuce" value="Lettuce" name="CheckBox" type="checkbox">
+            <label for="Lettuce">Lettuce</label><br>
+            <input id="Tomatoes" value="Tomatoes" name="CheckBox" type="checkbox">
+            <Label for="Tomatoes">Tomatoes</Label><br><br>
+        </div>
+        <label for="textarea">Please enter any additional remarks below</label><br><br>
+        <textarea id="textarea" >Comments/Remarks</textarea><br>
+        <button id="submit" type="submit">submit</button>
+
+    </form>
+</body>
+</html>

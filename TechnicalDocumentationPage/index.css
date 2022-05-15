@@ -1,0 +1,131 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    grid-template-areas: "navbar body";
+    column-gap: 20px;
+}
+
+#navbar {
+    grid-area: navbar;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(15 1fr);
+    top: 0px;
+    left: 0px;
+    border-right: 5px;
+    border-style: solid;
+    border-color: grey;
+    justify-content: center;
+}
+
+.nav-link {
+    border-top: 3px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-color: black;
+    border-style: solid;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    padding-top: 7%;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    color: black;
+    margin: 0px;
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: thin;
+}
+
+#main-doc {
+    grid-area: body;
+    display: grid ;
+    align-items: center ;
+    grid-auto-flow: row ;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    overflow: scroll;
+    justify-content: start;
+    text-align: left;
+}
+
+.main-section {
+    justify-content: start;
+    margin: 20px;
+    margin-right: 100px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+p {
+    font-size: large;
+}
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+      border: 1px solid;
+      height: 207px;
+    }
+    body {
+        grid-template-areas: "navbar navbar" "body body";
+        height: 10vh;
+    }
+    #navbar {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-height: 275px;
+      border: none;
+      z-index: 1;
+      border-bottom: 2px solid;
+    }
+  
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 270px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    #main-doc {
+      margin-left: -10px;
+    }
+  
+    code {
+      margin-left: -20px;
+      width: 100%;
+      padding: 15px;
+      padding-left: 10px;
+      padding-right: 45px;
+      min-width: 233px;
+    }
+  }
+  

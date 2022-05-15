@@ -1,0 +1,45 @@
+:root{
+    color: black
+}
+ul {
+    list-style-type: none;
+}
+
+form {
+    background-color: lightcyan;
+    padding: 30px;
+    width: 700px;
+    height: max-content;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.labels {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    width: 500px;
+}
+
+label {
+    font-size: 20px;
+}
+
+#Heading {
+    margin: auto;
+    width: 700px;
+    text-align: center;
+}
+
+.input1 {
+    width: 98%;
+    height: 20px;
+}
+
+li {
+    margin-left: -35px;
+}
+
+textarea {
+    width: 98%;
+
+}
