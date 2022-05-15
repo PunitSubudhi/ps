@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Dev</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js"></script>
-    
 </head>
 <body>
+    <div id="App1">
+    <script src="script.js"></script>
     <div class="wrapper">
-        <p id="date"></p>
-        <button onclick='changeColou()' id="colorButton">change color to white</button>
-        <div class="wrapper-2">
-
-
-            <input type="text" name="color" id="colorInput" placeholder="Enter a color">
-            <button type="button" onclick="setBodyColor();">Change color</button>
-
-
-            <input type="text" name="textInput" id="textInput" placeholder="Text to be inserted">
-            <button type="button" onclick="insertText();">Insert text</button>
+        <h1> Welcome to Colour match</h1>
+        <div class="vWrapper">
+            <!-- Input 1-->
+            <input type="text" name="color1" id="c1input" class="input" placeholder="Color1" onchange="updateValue()">
             
-            <input type="text" name="textColor" id="textColorInput" placeholder="Cloose Color of Text">
-            <button type="button" onclick="changeTextColor();">Insert Color of Text</button>
-        </div>
+             <!-- Input 1-->
+            <input type="text" name="color2" id="c2input" class="input" placeholder="Color2" onchange="updateValue()"">
 
-        <div id="colorDiv">
-            <p id="colorDivText"></p>
+             <!-- Input 1-->
+            <input type="text" name="color3" id="c3input" class="input" placeholder="Color3" onchange="updateValue()"">
+            
         </div>
     </div>
 
-    
+    <div class="wrapper" id="c1">
+        <h1>Color-1</h1>
+        <h1 id="colorName1"></h1>
+    </div>
+
+    <div class="wrapper" id="c2">
+        <h1>Color-2</h1>
+        <h1 id="colorName2"></h1>
+    </div>
+
+    <div class="wrapper" id="c3">
+        <h1>Color-3</h1>
+        <h1 id="colorName3"></h1>
+    </div>
+    </div>
 </body>
 </html>
