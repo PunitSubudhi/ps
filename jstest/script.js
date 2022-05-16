@@ -238,3 +238,4 @@ function invertColor(hex) {
     // pad each with zeros and return
     return 'rgb(' + r + "," + g + "," + b + ")";
 }
+  
