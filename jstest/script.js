@@ -6,26 +6,16 @@ var app1val1 = "";
 var app1val2 = "";
 var app1val3 = "";
 
-var app2RGB = "rgb(255,255,255)";
+var app2RGB = "rgb(0,0,0)";
 var app2R = 0;
 var app2G = 0;
 var app2B = 0;
 
-function updateValue(){
-    let val1 = document.getElementById('c1input').value;
-    document.getElementById('colorName1').innerHTML = val1;
-    document.getElementById('c1').style.backgroundColor = val1;
+function updateValue(pm){
+    let val1 = document.getElementById('c'+pm+'input').value;
+    document.getElementById('colorName'+pm).innerHTML = val1;
+    document.getElementById('c'+pm).style.backgroundColor = val1;
     app1val1 = val1;
-
-    let val2 = document.getElementById('c2input').value;
-    document.getElementById('colorName2').innerHTML = val2;
-    document.getElementById('c2').style.backgroundColor = val2;
-    app1val2 = val2;
-
-    let val3 = document.getElementById('c3input').value;
-    document.getElementById('colorName3').innerHTML = val3;
-    document.getElementById('c3').style.backgroundColor = val3;
-    app1val3 = val3;
 }
 
 function setDisplay(value,id){
@@ -36,9 +26,7 @@ function enableApp1(){
     if(!app1){
 
         document.getElementById('App1').style.display = "block";
-
         document.getElementById('App2').style.display = "none";
-
         document.getElementById('App3').style.display = "none";
         app1 = true;
         app2 = false;
@@ -96,4 +84,10 @@ function rgbUpdate(){
     document.getElementById('gValueText').innerHTML = app2G;
     document.getElementById('bValueText').innerHTML = app2B;
     
+}
+
+function sendTo(pm) {
+    document.getElementById('c'+pm+'input').value = app2RGB;
+    updateValue(pm);
+    alert("The value of Color"+pm+" has been updated to "+app2RGB);
 }

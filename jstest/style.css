@@ -182,3 +182,7 @@ nav {
 .fitcontent{
     height: fit-content;
 }
+
+.border {
+    border-style: dotted;
+}

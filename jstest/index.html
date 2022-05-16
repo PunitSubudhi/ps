@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>JS Dev</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="script.js"></script>
@@ -18,17 +18,17 @@
     <div id="App1">
         
         <div class="wrapper">
-            <h1> Welcome to Colour match</h1>
+            <h1>Compare Colours</h1>
             <div class="vWrapper">
 
                 <!-- Input 1-->
-                <input type="text" name="color1" id="c1input" class="input" placeholder="Color1" onchange="updateValue()">
+                <input type="text" name="color1" id="c1input" class="input" placeholder="Color1" onchange="updateValue(1)">
                 
                 <!-- Input 2-->
-                <input type="text" name="color2" id="c2input" class="input" placeholder="Color2" onchange="updateValue()">
+                <input type="text" name="color2" id="c2input" class="input" placeholder="Color2" onchange="updateValue(2)">
 
                 <!-- Input 3-->
-                <input type="text" name="color3" id="c3input" class="input" placeholder="Color3" onchange="updateValue()">
+                <input type="text" name="color3" id="c3input" class="input" placeholder="Color3" onchange="updateValue(3)">
 
             </div>
         </div>
@@ -51,7 +51,7 @@
 
     <div id="App2">
         <div class="wrapper white">
-            <div class="app2rgb">
+            <div class="app2rgb fitcontent">
                 <div class="wrapper white">
                     <div id="rgbcolor">
                     </div>
@@ -82,6 +82,14 @@
 
                 </div>
             </div>
+        </div>
+        <div class="wrapper">
+            <div class="vWrapper">
+                <button type="button" onclick="sendTo(1)" class="navbtn border">Send to C1</button>
+                <button type="button" onclick="sendTo(2)" class="navbtn border">Send to C2</button>
+                <button type="button" onclick="sendTo(3)" class="navbtn border">Send to C3</button>
+            </div>
+
         </div>
     </div>
 
