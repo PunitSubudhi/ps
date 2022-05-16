@@ -15,7 +15,10 @@ function updateValue(pm){
     let val1 = document.getElementById('c'+pm+'input').value;
     document.getElementById('colorName'+pm).innerHTML = val1;
     document.getElementById('c'+pm).style.backgroundColor = val1;
-    app1val1 = val1;
+    document.getElementById('updatebtn'+pm).style.backgroundColor = val1;
+    if(pm==1)app1val1 = val1;
+    if(pm==2)app1val2 = val1;
+    if(pm==3)app1val3 = val1;
 }
 
 function setDisplay(value,id){
@@ -24,10 +27,9 @@ function setDisplay(value,id){
 
 function enableApp1(){
     if(!app1){
-
-        document.getElementById('App1').style.display = "block";
-        document.getElementById('App2').style.display = "none";
-        document.getElementById('App3').style.display = "none";
+        setDisplay('block','App1');
+        setDisplay('none','App2');
+        setDisplay('none','App3');
         app1 = true;
         app2 = false;
         app3 = false;
@@ -36,11 +38,9 @@ function enableApp1(){
 
 function enableApp2(){
     if(!app2){
-
-        document.getElementById('App1').style.display = "none";
-        document.getElementById('App2').style.display = "block";
-        document.getElementById('App3').style.display = "none";
-
+        setDisplay('none','App1');
+        setDisplay('block','App2');
+        setDisplay('none','App3');
         app1 = false;
         app2 = true;
         app3 = false;
@@ -49,15 +49,12 @@ function enableApp2(){
 
 function enableApp3(){
     if(!app3){
-
-        document.getElementById('App1').style.display = "none";
-        document.getElementById('App2').style.display = "none";
-        document.getElementById('App3').style.display = "block";
-
+        setDisplay('none','App1');
+        setDisplay('none','App2');
+        setDisplay('block','App3');
         app1 = false;
         app2 = false;
         app3 = true;
-        
     }
 }
 
@@ -89,5 +86,5 @@ function rgbUpdate(){
 function sendTo(pm) {
     document.getElementById('c'+pm+'input').value = app2RGB;
     updateValue(pm);
-    alert("The value of Color"+pm+" has been updated to "+app2RGB);
+   // alert("The value of Color"+pm+" has been updated to "+app2RGB);
 }
