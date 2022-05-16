@@ -73,13 +73,21 @@
                         <p id="bValueText" class="rgbval" >0</p>
                     </div>
 
-                    <div class="tooltip">
-                        <button onclick="myFunction()" onmouseout="outFunc()">
-                            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-                            Copy RGB Values
-                        </button>
-                    </div>
+                    <div class="vWrapper">
+                        <div class="tooltip">
+                            <button onclick="myFunction()" onmouseout="outFunc()" class="copy">
+                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                Copy RGB Values
+                            </button>
+                        </div>
 
+                        <div class="tooltip">
+                            <button onclick="myFunction2()" onmouseout="outFunc2()" class="copy">
+                                <span class="tooltiptext" id="myTooltip2">Copy to clipboard</span>
+                                Copy HEX Values
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
