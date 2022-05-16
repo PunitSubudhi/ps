@@ -21,6 +21,13 @@ function updateValue(pm){
     var invRGB = invertColor(nameToHex(val1));
     document.getElementById('c'+pm).style.color = invRGB;
     document.getElementById('updatebtn'+pm).style.color = invRGB;
+
+    if(pm ==1) app1val1 = val1;
+    if(pm ==2) app1val2 = val1;
+    if(pm ==3) app1val3 = val1;
+
+    console.log(app1val1+app1val2+app1val3)
+
 }
 
 function setDisplay(value,id){
@@ -239,3 +246,8 @@ function invertColor(hex) {
     return 'rgb(' + r + "," + g + "," + b + ")";
 }
   
+function saveCurrentPallet(){
+    var content = "Color1: "+app1val1+ " HEX: "+ nameToHex(app1val1) + " HSL: " + nameToHSL(app1val1) + "\n" + "\n" + "Color2: " + app1val2+ " HEX: "+ nameToHex(app1val2) + " HSL: " + nameToHSL(app1val2) + "\n" + "\n" +"Color3: "+ app1val3 + " HEX: "+ nameToHex(app1val3) + " HSL: " + nameToHSL(app1val3) ;
+    var myFile = new File([content], "ColorPalete.txt", {type: "text/plain;charset=utf-8"});
+    saveAs(myFile);
+}
