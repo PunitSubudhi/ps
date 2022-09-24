@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    color: grey;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexh {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: dashed;
+    border-width: 0.23ch;
+    margin: 1ch 2ch;
+    border-radius: 10px;
+}
+
